@@ -1,0 +1,26 @@
+[
+    {
+        "cadena": "y%2*7-5",
+        "tipo": "valida"
+    },
+    {
+        "cadena": "1*(1)%5",
+        "tipo": "valida"
+    },
+    {
+        "cadena": "y$",
+        "tipo": "invalida"
+    },
+    {
+        "cadena": "(var)",
+        "tipo": "invalida"
+    },
+    {
+        "cadena": "4*3%y+(x)*y(var)/x%y-y/1+var-x4(8)8%4/z-(z)*y-0-z0",
+        "tipo": "extrema"
+    },
+    {
+        "cadena": "(7)(y)%z*9x%z+5%zz%0/0-z%zz*y%y+z-yx/var/y(y)*z(8)",
+        "tipo": "extrema"
+    }
+]

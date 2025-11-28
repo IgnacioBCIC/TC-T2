@@ -1,0 +1,100 @@
+Manual de Usuario
+
+Generador Automático de Casos de Prueba para Expresiones Aritméticas
+
+1. Requisitos previos
+
+Python 3.10 o superior instalado.
+
+Archivo de gramática en formato .txt (por ejemplo, gramatica.txt).
+
+Estructura del proyecto ubicada en una carpeta única.
+
+2. Ejecución del programa
+
+Abrir una terminal en la carpeta raíz del proyecto.
+
+Ejecutar el programa con el siguiente comando:
+
+python main.py
+
+
+Cuando el sistema lo solicite, ingresar la ruta del archivo de gramática.
+Ejemplo:
+
+gramatica.txt
+
+3. Configuración de generación
+
+El sistema solicitará los siguientes parámetros:
+
+Cantidad de cadenas válidas.
+
+Cantidad de cadenas inválidas.
+
+Cantidad de cadenas extremas.
+
+Profundidad máxima de derivación (controla la recursión del generador de expresiones).
+
+Longitud máxima para las expresiones extremas.
+
+Cada valor debe ingresarse en formato numérico entero.
+
+Ejemplo:
+
+Cantidad de cadenas válidas: 5
+Cantidad de cadenas inválidas: 5
+Cantidad de cadenas extremas: 5
+Profundidad máxima de derivación: 6
+Longitud máxima para casos extremos: 200
+
+4. Funcionamiento del sistema
+
+Una vez ingresados los parámetros:
+
+El sistema genera expresiones válidas mediante derivación directa desde la gramática.
+
+Genera expresiones inválidas aplicando mutaciones controladas y verificando la sintaxis mediante un parser LL(1).
+
+Genera expresiones extremas combinando múltiples derivaciones y respetando el límite de longitud definido por el usuario.
+
+Clasifica todas las expresiones en válida, inválida o extrema.
+
+Calcula métricas generales sobre el conjunto generado.
+
+Exporta el resultado final a un archivo JSON.
+
+5. Resultados
+
+Los resultados se generan automáticamente en el archivo:
+
+output/casos.json
+
+
+Este archivo contiene la lista completa de expresiones generadas junto a su clasificación.
+
+La consola mostrará además un resumen estadístico con:
+
+Total de cadenas generadas.
+
+Porcentajes por tipo.
+
+Tamaños de cada cadena.
+
+Cantidad de operadores.
+
+Profundidad máxima de paréntesis.
+
+6. Estructura del archivo JSON
+
+El archivo casos.json contiene objetos con el formato:
+
+{
+    "cadena": "expresion_generada",
+    "tipo": "valida | invalida | extrema"
+}
+
+7. Finalización
+
+Al terminar la ejecución, simplemente cierre la terminal.
+El archivo JSON quedará disponible para revisión o integración con otros sistemas de prueba.
